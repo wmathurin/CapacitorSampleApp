@@ -1,0 +1,11 @@
+{
+  "appId": "com.salesforce.sampleapp",
+  "appName": "CapacitorSampleApp",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
