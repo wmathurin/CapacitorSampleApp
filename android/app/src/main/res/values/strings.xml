@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CapacitorSampleApp</string>
+    <string name="title_activity_main">CapacitorSampleApp</string>
+    <string name="package_name">com.salesforce.sampleapp</string>
+    <string name="custom_url_scheme">com.salesforce.sampleapp</string>
+</resources>
