@@ -17,7 +17,8 @@
     "@capacitor/camera": "latest",
     "@capacitor/core": "latest",
     "@capacitor/ios": "^5.2.1",
-    "@capacitor/splash-screen": "latest"
+    "@capacitor/splash-screen": "latest",
+    "SalesforceMobileSDK-Capacitor-Plugin": "https://github.com/wmathurin/SalesforceMobileSDK-Capacitor-Plugin"
   },
   "devDependencies": {
     "@capacitor/cli": "latest",

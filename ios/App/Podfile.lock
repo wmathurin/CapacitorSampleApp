@@ -1,0 +1,87 @@
+PODS:
+  - Capacitor (5.2.1):
+    - CapacitorCordova
+  - CapacitorCamera (5.0.6):
+    - Capacitor
+  - CapacitorCordova (5.2.1)
+  - CapacitorSplashScreen (5.0.6):
+    - Capacitor
+  - FMDB/SQLCipher (2.7.5):
+    - SQLCipher
+  - MobileSync (11.0.0):
+    - MobileSync/MobileSync (= 11.0.0)
+  - MobileSync/MobileSync (11.0.0):
+    - SmartStore (~> 11.0.0)
+  - SalesforceAnalytics (11.0.0):
+    - SalesforceAnalytics/SalesforceAnalytics (= 11.0.0)
+  - SalesforceAnalytics/SalesforceAnalytics (11.0.0):
+    - SalesforceSDKCommon (~> 11.0.0)
+  - SalesforceMobileSDKCapacitorPlugin (0.0.1):
+    - Capacitor
+    - MobileSync (~> 11.0.0)
+  - SalesforceSDKCommon (11.0.0):
+    - SalesforceSDKCommon/SalesforceSDKCommon (= 11.0.0)
+  - SalesforceSDKCommon/SalesforceSDKCommon (11.0.0)
+  - SalesforceSDKCore (11.0.0):
+    - SalesforceSDKCore/SalesforceSDKCore (= 11.0.0)
+  - SalesforceSDKCore/SalesforceSDKCore (11.0.0):
+    - SalesforceAnalytics (~> 11.0.0)
+  - SmartStore (11.0.0):
+    - SmartStore/SmartStore (= 11.0.0)
+  - SmartStore/SmartStore (11.0.0):
+    - FMDB/SQLCipher (~> 2.7.5)
+    - SalesforceSDKCore (~> 11.0.0)
+    - SQLCipher (~> 4.5.4)
+  - SQLCipher (4.5.4):
+    - SQLCipher/standard (= 4.5.4)
+  - SQLCipher/common (4.5.4)
+  - SQLCipher/standard (4.5.4):
+    - SQLCipher/common
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
+  - SalesforceMobileSDKCapacitorPlugin (from `../../node_modules/SalesforceMobileSDK-Capacitor-Plugin`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FMDB
+    - SQLCipher
+  https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs/:
+    - MobileSync
+    - SalesforceAnalytics
+    - SalesforceSDKCommon
+    - SalesforceSDKCore
+    - SmartStore
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCamera:
+    :path: "../../node_modules/@capacitor/camera"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorSplashScreen:
+    :path: "../../node_modules/@capacitor/splash-screen"
+  SalesforceMobileSDKCapacitorPlugin:
+    :path: "../../node_modules/SalesforceMobileSDK-Capacitor-Plugin"
+
+SPEC CHECKSUMS:
+  Capacitor: 36510199454641113344c2e5ef43bf3f54b5af79
+  CapacitorCamera: 4a95204d13a05b0b726bf9086b44124349ab1952
+  CapacitorCordova: d173eeb1635e62aa95a20874a5d5cbbf0aa1e0df
+  CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  MobileSync: 66e5115aec168f0ab8e8a9c6e8704d6c37e58637
+  SalesforceAnalytics: bc84c7404c2939be87bae700ff7978c7f1cf7d95
+  SalesforceMobileSDKCapacitorPlugin: 49e9ab04864a74c1db84d98306fdf0031534a562
+  SalesforceSDKCommon: e2481098decfa2e34268069449fd99f9fce6983c
+  SalesforceSDKCore: c4e9b237173a65b1282dd6c6041d888a08fd8016
+  SmartStore: ce759800e794194852ed4367d95d1b265bf372c7
+  SQLCipher: 905b145f65f349f26da9e60a19901ad24adcd381
+
+PODFILE CHECKSUM: 5a81622200966ca02f9d9b683fb3bb156071e255
+
+COCOAPODS: 1.12.1
