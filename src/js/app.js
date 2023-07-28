@@ -1,5 +1,5 @@
 import { SplashScreen } from '@capacitor/splash-screen';
-import { SDKInfoPlugin } from 'SalesforceMobileSDK-Capacitor-Plugin';
+import { SalesforceNetworkPlugin } from 'SalesforceMobileSDK-Capacitor-Plugin';
 
 window.customElements.define(
   'contact-list',
@@ -32,23 +32,33 @@ window.customElements.define(
       border-bottom: none;
     }
     </style>    
-    <ul>
-      <li>James Bond</li>
-      <li>Jason Bourne</li>
-    </ul>  
+    <ul id="list" />
     `;
     }
 
     connectedCallback() {
       const self = this;
+      const soql = "SELECT Id, Name FROM Contact LIMIT 100";
+      const request = {
+        method: "GET",
+        endPoint: "/services/data",
+        path: "/v55.0/query",
+        queryParams: JSON.stringify({q: soql})
+      };
 
-      self.shadowRoot.querySelector('#show-sdk-info').addEventListener('click', async function (e) {
-        const sdkInfo = await SDKInfoPlugin.getInfo();
-        alert(JSON.stringify(sdkInfo));
-      });
+      (async () => {
+        const response = await SalesforceNetworkPlugin.sendRequest(request);
+        const contacts = JSON.parse(response.body).records;
+        const ul = self.shadowRoot.querySelector("#list");
+        for (var i=0; i < contacts.length; i++) {
+          const li = document.createElement("li");
+          li.textContent = contacts[i].Name;
+          ul.appendChild(li);
+        }
+      })();
     }
-  }
-);
+});
+
 
 window.customElements.define(
   'title-bar',
@@ -78,39 +88,3 @@ window.customElements.define(
     }
   }
 );
-
-
-  //   /* Do login */
-  //   force.login(
-  //     function() {
-  //         console.log("Auth succeeded"); 
-  //         showContactsList();
-  //     },
-  //     function(error) {
-  //         console.log("Auth failed: " + error); 
-  //     }
-  // );
-
-  // /* This method will render a list of contacts from current salesforce org */
-  // var showContactsList = function() {
-
-  //     fetchRecords(function(data) {
-  //         var contacts = data.records;
-
-  //         var listItemsHtml = '';
-  //         for (var i=0; i < contacts.length; i++) {
-  //             listItemsHtml += ('<li class="table-view-cell"><div class="media-body">' + contacts[i].Name + '</div></li>');
-  //         }
-
-  //         document.querySelector('#contacts').innerHTML = listItemsHtml;
-  //     })
-  // }
-
-  // /* This method will fetch a list of contact records from salesforce.
-  // Just change the soql query to fetch another sobject. */
-  // var fetchRecords = function (successHandler) {
-  //     var soql = 'SELECT Id, Name FROM Contact LIMIT 100';
-  //     force.query(soql, successHandler, function(error) {
-  //         alert('Failed to fetch contacts: ' + error);
-  //     });
-  // };
