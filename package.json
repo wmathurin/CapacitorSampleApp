@@ -1,7 +1,7 @@
 {
   "name": "capacitor-app",
   "version": "1.0.0",
-  "description": "An Amazing Capacitor App",
+  "description": "Mobile SDK + Capacitor App",
   "main": "index.js",
   "keywords": [
     "capacitor",
@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@capacitor/android": "^5.2.1",
-    "@capacitor/camera": "latest",
     "@capacitor/core": "latest",
     "@capacitor/ios": "^5.2.1",
     "@capacitor/splash-screen": "latest",
